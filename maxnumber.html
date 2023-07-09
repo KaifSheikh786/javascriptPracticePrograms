@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice Assignment</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+    <script>
+
+        //For Preventing page reload 
+        document.addEventListener('DOMContentLoaded', function() {
+      var links = document.querySelectorAll('a');
+
+      links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+        });
+      });
+    });
+
+        //Function for Max number by Ladder
+
+    //     function maxNumber(){
+
+    //     let inputMax1 = parseInt(document.getElementById("inputMax1").value);
+    //     let inputMax2 = parseInt(document.getElementById("inputMax2").value);
+    //     let inputMax3 = parseInt(document.getElementById("inputMax3").value);
+    //     let inputMax4 = parseInt(document.getElementById("inputMax4").value);
+
+
+    //     if (inputMax1>inputMax2 && inputMax1>inputMax3 && inputMax1>inputMax4 ){
+    //         document.getElementById("maxNumber").value = inputMax1 + " is the Max";
+    //     }
+
+    //     else if (inputMax2>inputMax1 && inputMax2>inputMax3 && inputMax2>inputMax4 ){
+    //         document.getElementById("maxNumber").value = inputMax2 + " is the Max";
+    //     }
+
+    //     else if (inputMax3>inputMax1 && inputMax3>inputMax2 && inputMax3>inputMax4 ){
+    //         document.getElementById("maxNumber").value = inputMax3 + " is the Max";
+    //     }
+
+    //     else{ 
+    //         document.getElementById("maxNumber").value = inputMax4 + " is the Max";
+    //     }
+
+    // }
+
+        function maxNumber(){
+
+        let inputMax1 = parseInt(document.getElementById("inputMax1").value);
+        let inputMax2 = parseInt(document.getElementById("inputMax2").value);
+        let inputMax3 = parseInt(document.getElementById("inputMax3").value);
+        let inputMax4 = parseInt(document.getElementById("inputMax4").value);
+
+
+        if (inputMax1>inputMax2){
+
+            if(inputMax1>inputMax3){
+                if(inputMax1>inputMax4 ){
+                    document.getElementById("maxNumber").value = inputMax1 + " is the Max";
+                }
+        }
+        }
+
+        else if (inputMax2>inputMax3){
+            {
+                if(inputMax2>inputMax4 ){
+                    document.getElementById("maxNumber").value = inputMax2 + " is the Max";
+                }
+        }
+     }
+
+        else if (inputMax3>inputMax4){
+                    document.getElementById("maxNumber").value = inputMax3 + " is the Max";
+         }
+
+        else {4
+                    document.getElementById("maxNumber").value = inputMax4 + " is the Max";
+     }
+    }
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+    <header class="container">
+        <div class="header-heading-container">
+            <h1 class="header-element">JavaScript Practice Programs </h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <form class="col-sm-3" >
+                <div class="main-container">
+                <div class="heading-container"><h1 class="heading">Find the Max</h1></div>
+                <div class="input-container"><div class="inputfield1"> Enter Number </div><input class="input100" type="text" placeholder="Enter value" id="inputMax1"><hr></div>
+                <div class="input-container"><div class="inputfield1"> Enter Number </div><input class="input100" type="text" placeholder="Enter value" id="inputMax2"><hr></div>
+                <div class="input-container"><div class="inputfield1"> Enter Number </div><input class="input100" type="text" placeholder="Enter value" id="inputMax3"><hr></div>
+                <div class="input-container"><div class="inputfield1"> Enter Number </div><input class="input100" type="text" placeholder="Enter value" id="inputMax4"><hr></div>
+                <number class="form-btn-container"><div class="btn-container-main"><a name="" onclick="maxNumber()" class="btn btn-primary" href="#" role="button" type="submit" value="submit">Get Max</a></div></number> 
+                <div class="input-container"><div class="inputfield1"> Max number is </div><input class="input100" type="text" placeholder="Answer will be shown here" id="maxNumber"><hr></div> </div>
+            </form>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

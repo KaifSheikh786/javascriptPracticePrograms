@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practice Assignment</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+    <script>
+        // // Function for Checking Voting Eligibility by Ternary Operator
+
+        // function checkVotingEligibility(){ //by ternary
+
+        // let inputAge = parseInt(document.getElementById("inputAge").value);
+        // let checkedVotingEligibility = (inputAge>18) ? document.getElementById("checkedVotingEligibility").value = "Eligible" : document.getElementById("checkedVotingEligibility").value =  "Not Eligible";
+
+        // }
+
+        // Function for Checking Voting Eligibility by If else
+
+        function checkVotingEligibility(){
+
+        let inputAge = parseInt(document.getElementById("inputAge").value);
+
+
+        if (isNaN(inputAge)){
+            document.getElementById("checkedVotingEligibility").value = "Please enter Age";
+        }
+
+        else{ 
+
+            if (inputAge>18) {
+            document.getElementById("checkedVotingEligibility").value = " Is Eligible";
+            }
+
+            else{
+                document.getElementById("checkedVotingEligibility").value =  "Can Vote After " + (18-inputAge) + " Years";
+            }
+            }
+
+        }
+  
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+    <header class="container">
+        <div class="header-heading-container">
+            <h1 class="header-element">JavaScript Practice Programs </h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <form class="col-sm-3" >
+                <div class="main-container">
+                <div class="heading-container"><h1 class="heading">Voting Eligibilty</h1></div>
+                <div class="input-container"><div class="inputfield1"> Enter the Age </div><input class="input100" type="text" placeholder="Enter here" id="inputAge"><hr></div>
+                <number class="form-btn-container"><div class="btn-container-main"><a name="" onclick="checkVotingEligibility()" class="btn btn-primary" href="#" role="button" type="submit" value="submit">Check</a></div></number> 
+                <div class="input-container"><div class="inputfield1"> This Candidate </div><input class="input100" type="text" placeholder="Answer will be shown here" id="checkedVotingEligibility"><hr></div> </div>
+            </form>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
